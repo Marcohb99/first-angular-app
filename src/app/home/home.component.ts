@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ConsoleComponent} from '../console/console.component';
+import {VideoGameComponent} from '../video-game/video-game.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ConsoleComponent],
+  imports: [CommonModule, VideoGameComponent],
   template: `
     <section>
       <form>
@@ -14,7 +14,7 @@ import {ConsoleComponent} from '../console/console.component';
       </form>
     </section>
     <section class="results">
-      <app-console></app-console>
+      <app-video-game></app-video-game>
     </section>
   `,
   styleUrls: ['./home.component.css'],

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ConsoleComponent } from './console/console.component';
+import { VideoGameComponent } from './video-game/video-game.component';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { ConsoleComponent } from './console/console.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ConsoleComponent,   
+    ConsoleComponent,
+    VideoGameComponent,   
 ],
   bootstrap: [
     AppComponent
