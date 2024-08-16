@@ -7,11 +7,11 @@ import {CommonModule} from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section>
-      <h2> {{ videoGame.name }}</h2>
-      <h3> {{ videoGame.console }}</h3>
-      <p> Units left:  {{ videoGame.availableUnits }}</p>
-      <p> With box:  {{ videoGame.hasBox }}</p>
+    <section class="listing" *ngIf="videoGame">
+      <h2 class="listing-heading">{{ videoGame.name }}</h2>
+      <h3 class="listing-heading">{{ videoGame.console }}</h3>
+      <p class="listing-location">Units left: {{ videoGame.availableUnits }}</p>
+      <p class="listing-location">With box: {{ videoGame.hasBox }}</p>
     </section>
   `,
   styleUrls: ['./video-game.component.css']
