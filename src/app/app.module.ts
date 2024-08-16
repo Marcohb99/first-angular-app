@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { VideoGameComponent } from './video-game/video-game.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { VideoGameComponent } from './video-game/video-game.component';
     HomeComponent,
     VideoGameComponent
   ],
-  declarations: [],
+  declarations: [
+    DetailsComponent
+  ],
   bootstrap: []
 })
 export class AppModule { }

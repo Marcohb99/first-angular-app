@@ -1,4 +1,4 @@
-import {Component, inject, Inject} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {CommonModule, NgFor} from '@angular/common';
 import {VideoGameComponent} from '../video-game/video-game.component';
 import {VideoGame} from '../videogame';
