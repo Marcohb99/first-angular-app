@@ -2,21 +2,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ConsoleComponent } from './console/console.component';
 import { VideoGameComponent } from './video-game/video-game.component';
 
 
 @NgModule({
-  imports: [],
-  declarations: [
+  imports: [
     AppComponent,
     HomeComponent,
-    ConsoleComponent,
-    VideoGameComponent,   
-],
-  bootstrap: [
-    AppComponent
-  ]
+    VideoGameComponent
+  ],
+  declarations: [],
+  bootstrap: []
 })
 export class AppModule { }
 
