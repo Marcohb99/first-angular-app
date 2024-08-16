@@ -8,7 +8,7 @@ import {CommonModule} from '@angular/common';
   template: `
     <section>
       <form>
-        <input type="text" placeholder="Filter by city" />
+        <input type="text" placeholder="Filter by console" />
         <button class="primary" type="button">Search</button>
       </form>
     </section>
