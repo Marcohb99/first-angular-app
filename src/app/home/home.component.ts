@@ -34,8 +34,11 @@ export class HomeComponent {
   filteredVideoGames: VideoGame[] = [];
 
   constructor() {
-    this.videoGameList = this.videoGameService.getAllVideoGames();
-    this.filteredVideoGames = this.videoGameList;
+    this.videoGameService.getAllVideoGames()
+    .then((videoGameList: VideoGame[]) => {
+      this.videoGameList = videoGameList;
+      this.filteredVideoGames = videoGameList;
+    });
   }
 
   filterResults(text: string) {

@@ -51,7 +51,10 @@ export class DetailsComponent {
 
   constructor() {
     const videoGameId = String(this.route.snapshot.params['id']);
-    this.videoGame = this.videoGameService.getVideoGameById(videoGameId);
+    this.videoGameService.getVideoGameById(videoGameId)
+    .then(videoGame => {
+      this.videoGame = videoGame;
+    });
   }
 
   submitApplication() {

@@ -1,0 +1,44 @@
+{
+    "videogames": [
+        {
+            "id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+            "name": "Metroid Prime",
+            "console": "Nintendo Gamecube (NGC)",
+            "releaseDate": "19-11-2003",
+            "availableUnits": 105,
+            "hasBox": true
+        },
+        {
+            "id": "44ede8ba-95ee-438d-967e-d35e787fb49a",
+            "name": "Pikmin 2",
+            "console": "Nintendo Gamecube (NGC)",
+            "releaseDate": "29-04-2004",
+            "availableUnits": 10,
+            "hasBox": true
+        },
+        {
+            "id": "44ede8ba-96ee-438d-967e-d35e787fb49a",
+            "name": "Devil May Cry 3",
+            "console": "PlayStation 2",
+            "releaseDate": "24-03-2005",
+            "availableUnits": 1105,
+            "hasBox": false
+        },
+        {
+            "id": "44ede8ba-97ee-438d-967e-d35e787fb49a",
+            "name": "Mega Man 2",
+            "console": "Nintendo Entertainment System ( NES)",
+            "releaseDate": "14-12-1990",
+            "availableUnits": 5,
+            "hasBox": false
+        },
+        {
+            "id": "44ede8ba-98ee-438d-967e-d35e787fb49a",
+            "name": "F Zero X",
+            "console": "Nintendo 64",
+            "releaseDate": "06-11-1998",
+            "availableUnits": 50,
+            "hasBox": true
+        }
+    ]
+}

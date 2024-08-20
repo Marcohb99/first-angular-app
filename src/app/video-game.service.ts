@@ -16,12 +16,11 @@ export class VideoGameService {
       }
   ];
 
-  getAllVideoGames(): VideoGame[] {
-    return this.videoGameList;
-  }
+  url = 'http://localhost:3000/videogames';
 
-  getVideoGameById(id: string): VideoGame | undefined {
-    return this.videoGameList.find((videoGame) => videoGame.id === id);
+  async getVideoGameById(id: string): Promise<VideoGame | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return (await data.json()) ?? {};
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {
@@ -38,5 +37,10 @@ export class VideoGameService {
       videoGame?.console.toLowerCase().includes(text.toLowerCase()),
     );
     return games;
+  }
+
+  async getAllVideoGames(): Promise<VideoGame[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? [];
   }
 }
