@@ -14,13 +14,13 @@ import { VideoGameService } from '../video-game.service';
   template: `
     <section>
       <form>
-        <input type="text" placeholder="Filter by console" />
-        <button class="primary" type="button">Search</button>
+        <input type="text" placeholder="Filter by console" #filter/>
+        <button class="primary" (click)="filterResults(filter.value)">Search</button>
       </form>
     </section>
     <section class="results">
       <app-video-game 
-        *ngFor="let v of videoGameList" 
+        *ngFor="let v of filteredVideoGames" 
         [videoGame]="v"
       >
       </app-video-game>
@@ -31,8 +31,16 @@ import { VideoGameService } from '../video-game.service';
 export class HomeComponent {
   videoGameList : VideoGame[] = [];
   videoGameService: VideoGameService = inject(VideoGameService);
+  filteredVideoGames: VideoGame[] = [];
 
   constructor() {
     this.videoGameList = this.videoGameService.getAllVideoGames();
+    this.filteredVideoGames = this.videoGameList;
+  }
+
+  filterResults(text: string) {
+    this.filteredVideoGames = text.length > 0 
+      ? this.videoGameService.getVideoGamesByConsole(text)
+      : this.videoGameList;
   }
 }

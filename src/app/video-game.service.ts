@@ -29,4 +29,14 @@ export class VideoGameService {
       `Application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
     );
   }
+
+  getVideoGamesByConsole(text: string): VideoGame[] {
+    if (!text) {
+      return [];
+    }
+    let games = this.videoGameList.filter((videoGame) =>
+      videoGame?.console.toLowerCase().includes(text.toLowerCase()),
+    );
+    return games;
+  }
 }
