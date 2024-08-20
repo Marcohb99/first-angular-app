@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,11 +11,13 @@ import { DetailsComponent } from './details/details.component';
   imports: [
     AppComponent,
     HomeComponent,
-    VideoGameComponent
-  ],
-  declarations: [
+    VideoGameComponent,
+    FormControl,
+    FormGroup,
+    ReactiveFormsModule,
     DetailsComponent
   ],
+  declarations: [],
   bootstrap: []
 })
 export class AppModule { }

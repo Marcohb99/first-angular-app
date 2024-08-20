@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {CommonModule, NgFor} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {VideoGameComponent} from '../video-game/video-game.component';
 import {VideoGame} from '../videogame';
 import { VideoGameService } from '../video-game.service';

@@ -23,4 +23,10 @@ export class VideoGameService {
   getVideoGameById(id: string): VideoGame | undefined {
     return this.videoGameList.find((videoGame) => videoGame.id === id);
   }
+
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(
+      `Application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
+    );
+  }
 }
