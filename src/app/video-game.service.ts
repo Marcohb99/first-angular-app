@@ -29,7 +29,7 @@ export class VideoGameService {
     );
   }
 
-  getVideoGamesByConsole(text: string): VideoGame[] {
+  async getVideoGamesByConsole(text: string): Promise<VideoGame[]> {
     if (!text) {
       return [];
     }
