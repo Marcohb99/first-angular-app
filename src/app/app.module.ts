@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { VideoGameComponent } from './video-game/video-game.component';
 import { DetailsComponent } from './details/details.component';
+import { SingupComponent } from './singup/singup.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { DetailsComponent } from './details/details.component';
     VideoGameComponent,
     FormControl,
     ReactiveFormsModule,
-    DetailsComponent
+    DetailsComponent,
+    SingupComponent,
+    AppRoutingModule,
   ],
   declarations: [],
   bootstrap: []

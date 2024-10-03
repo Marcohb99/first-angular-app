@@ -3,26 +3,28 @@ import {CommonModule} from '@angular/common';
 import {VideoGameComponent} from '../video-game/video-game.component';
 import {VideoGame} from '../videogame';
 import { VideoGameService } from '../video-game.service';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule, 
-    VideoGameComponent
+    CommonModule,
+    VideoGameComponent,
+    RouterLink
   ],
   template: `
     <section>
       <form>
-        <input class="search-input" type="text" appearance="outline" placeholder="Filter by console" #filter/>
-        <button class="primary" (click)="filterResults(filter.value)">Search</button>
+        <input type="text" placeholder="Filter by console" #filter>
+        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+        <button class="primary" routerLink="/create-account">Create Account</button>
       </form>
     </section>
     <section class="results">
-      <app-video-game 
-        *ngFor="let v of filteredVideoGames" 
-        [videoGame]="v"
-      >
+      <app-video-game
+          *ngFor="let videoGame of filteredVideoGames"
+          [videoGame]="videoGame">
       </app-video-game>
     </section>
   `,
@@ -42,14 +44,14 @@ export class HomeComponent {
   }
 
   filterResults(text: string) {
-    if (text.length <= 0) {
+    if (!text) {
       this.filteredVideoGames = this.videoGameList;
       return;
     }
 
     this.videoGameService.getVideoGamesByConsole(text)
-    .then((videoGameList: VideoGame[]) => {
-      this.filteredVideoGames = videoGameList;
+    .then((filteredVideoGameList: VideoGame[]) => {
+      this.filteredVideoGames = filteredVideoGameList;
     });
   }
 }

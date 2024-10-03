@@ -57,7 +57,7 @@ input {
 }
 @media (max-width: 1024px) {
     .listing-photo {
-      width: 50%;
-      height: 50%;
+        width: 50%;
+        height: 50%;
     }
 }
