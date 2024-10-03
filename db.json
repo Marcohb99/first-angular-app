@@ -5,40 +5,40 @@
             "name": "Metroid Prime",
             "console": "Nintendo Gamecube (NGC)",
             "releaseDate": "19-11-2003",
-            "availableUnits": 105,
-            "hasBox": true
+            "image": "metroid_prime.jpg",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "id": "44ede8ba-95ee-438d-967e-d35e787fb49a",
             "name": "Pikmin 2",
             "console": "Nintendo Gamecube (NGC)",
             "releaseDate": "29-04-2004",
-            "availableUnits": 10,
-            "hasBox": true
+            "image": "pikmin2.jpg",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "id": "44ede8ba-96ee-438d-967e-d35e787fb49a",
             "name": "Devil May Cry 3",
             "console": "PlayStation 2",
             "releaseDate": "24-03-2005",
-            "availableUnits": 1105,
-            "hasBox": false
+            "image": "devil_may_cry_3.jpg",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "id": "44ede8ba-97ee-438d-967e-d35e787fb49a",
             "name": "Mega Man 2",
             "console": "Nintendo Entertainment System ( NES)",
             "releaseDate": "14-12-1990",
-            "availableUnits": 5,
-            "hasBox": false
+            "image": "mega_man_2_nes.jpg",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "id": "44ede8ba-98ee-438d-967e-d35e787fb49a",
             "name": "F Zero X",
             "console": "Nintendo 64",
             "releaseDate": "06-11-1998",
-            "availableUnits": 50,
-            "hasBox": true
+            "image": "f_zero_x.jpg",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
     ]
 }

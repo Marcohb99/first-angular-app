@@ -10,7 +10,7 @@ import {RouterModule} from '@angular/router';
     <main>
       <a [routerLink]="['/']">
         <header class="brand-name">
-          <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+          <img class="brand-logo" src="/assets/game-folder.png" alt="logo" aria-hidden="true" width="20%" height="20%" />
         </header>
       </a>
       <section class="content">
@@ -21,5 +21,5 @@ import {RouterModule} from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'homes';
+  title = 'Video Game Cataloguer';
 }

@@ -5,16 +5,7 @@ import { VideoGame } from './videogame';
   providedIn: 'root'
 })
 export class VideoGameService {
-  videoGameList : VideoGame[] = [
-      {
-        id: "44ede8ba-94ee-438d-967e-d35e787fb49a",
-        name: "Metroid Prime",
-        console: "Nintendo Gamecube (NGC)",
-        releaseDate: "19-11-2003",
-        availableUnits: 105,
-        hasBox: true,
-      }
-  ];
+  videoGameList : VideoGame[] = [];
 
   url = 'http://localhost:3000/videogames';
 

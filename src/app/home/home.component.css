@@ -38,4 +38,12 @@ button {
       grid-template-columns: 1fr;
   }    
 }
+
+.search-input {
+    border: 5px solid #000;
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
   

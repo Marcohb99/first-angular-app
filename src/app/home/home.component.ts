@@ -14,7 +14,7 @@ import { VideoGameService } from '../video-game.service';
   template: `
     <section>
       <form>
-        <input type="text" placeholder="Filter by console" #filter/>
+        <input class="search-input" type="text" appearance="outline" placeholder="Filter by console" #filter/>
         <button class="primary" (click)="filterResults(filter.value)">Search</button>
       </form>
     </section>

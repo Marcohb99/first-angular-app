@@ -3,6 +3,6 @@ export interface VideoGame {
     name: string,
     console: string,
     releaseDate: string,
-    availableUnits: number,
-    hasBox: boolean,
+    image: string,
+    description: string,
 }
