@@ -13,7 +13,6 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     VideoGameComponent,
     FormControl,
-    FormGroup,
     ReactiveFormsModule,
     DetailsComponent
   ],

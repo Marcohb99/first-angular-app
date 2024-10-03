@@ -33,10 +33,8 @@ export class VideoGameService {
     if (!text) {
       return [];
     }
-    let games = this.videoGameList.filter((videoGame) =>
-      videoGame?.console.toLowerCase().includes(text.toLowerCase()),
-    );
-    return games;
+    const data = await fetch(`${this.url}?console=${text}`);
+    return (await data.json()) ?? {};
   }
 
   async getAllVideoGames(): Promise<VideoGame[]> {

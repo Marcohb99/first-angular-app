@@ -42,8 +42,14 @@ export class HomeComponent {
   }
 
   filterResults(text: string) {
-    this.filteredVideoGames = text.length > 0 
-      ? this.videoGameService.getVideoGamesByConsole(text)
-      : this.videoGameList;
+    if (text.length <= 0) {
+      this.filteredVideoGames = this.videoGameList;
+      return;
+    }
+
+    this.videoGameService.getVideoGamesByConsole(text)
+    .then((videoGameList: VideoGame[]) => {
+      this.filteredVideoGames = videoGameList;
+    });
   }
 }
