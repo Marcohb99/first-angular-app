@@ -24,4 +24,9 @@ export class VideoGameService {
     const data = await fetch(this.url);
     return (await data.json()) ?? [];
   }
+
+  async getVideoGamesByName(text: string): Promise<VideoGame[]> {
+    const data = await fetch(`${this.url}?name=${text}`);
+    return (await data.json()) ?? [];
+  }
 }

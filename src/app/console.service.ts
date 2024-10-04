@@ -11,4 +11,9 @@ export class ConsoleService {
     const data = await fetch(`${this.url}/${id}`);
     return (await data.json()) ?? {};
   }
+
+  async getAllConsoles() {
+    const data = await fetch(`${this.url}`);
+    return (await data.json()) ?? {};
+  }
 }
