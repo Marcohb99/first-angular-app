@@ -19,7 +19,7 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
             alt="Image of {{ videoGame?.name }}"
             crossorigin
         />
-        <p class="listing-location">{{ videoGame?.console }}</p>
+        <p class="listing-location">{{ videoGame?.console?.name }}</p>
       </section>
       <section class="listing-features">
         <h2 class="section-heading">About this video game</h2>
