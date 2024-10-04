@@ -1,44 +1,93 @@
 {
-    "videogames": [
-        {
-            "id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
-            "name": "Metroid Prime",
-            "console": "Nintendo Gamecube (NGC)",
-            "releaseDate": "19-11-2003",
-            "image": "metroid_prime.jpg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "id": "44ede8ba-95ee-438d-967e-d35e787fb49a",
-            "name": "Pikmin 2",
-            "console": "Nintendo Gamecube (NGC)",
-            "releaseDate": "29-04-2004",
-            "image": "pikmin2.jpg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "id": "44ede8ba-96ee-438d-967e-d35e787fb49a",
-            "name": "Devil May Cry 3",
-            "console": "PlayStation 2",
-            "releaseDate": "24-03-2005",
-            "image": "devil_may_cry_3.jpg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "id": "44ede8ba-97ee-438d-967e-d35e787fb49a",
-            "name": "Mega Man 2",
-            "console": "Nintendo Entertainment System ( NES)",
-            "releaseDate": "14-12-1990",
-            "image": "mega_man_2_nes.jpg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "id": "44ede8ba-98ee-438d-967e-d35e787fb49a",
-            "name": "F Zero X",
-            "console": "Nintendo 64",
-            "releaseDate": "06-11-1998",
-            "image": "f_zero_x.jpg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        }
-    ]
+  "videogames": [
+    {
+      "id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+      "name": "Metroid Prime",
+      "console": {
+        "id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+        "name": "Nintendo Gamecube (NGC)"
+      },
+      "releaseDate": "19-11-2003",
+      "image": "metroid_prime.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "44ede8ba-95ee-438d-967e-d35e787fb49a",
+      "name": "Pikmin 2",
+      "console": {
+        "id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+        "name": "Nintendo Gamecube (NGC)"
+      },
+      "releaseDate": "29-04-2004",
+      "image": "pikmin2.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "46272218-4b1e-4a4d-86db-20a000ea194a",
+      "name": "Devil May Cry 3",
+      "console": {
+        "id": "beb583f7-0739-4daa-9eee-5477296f6d5a",
+        "name": "PlayStation 2"
+      },
+      "releaseDate": "24-03-2005",
+      "image": "devil_may_cry_3.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "9f26ec4b-b2f3-4dc1-aa78-291dc3877194",
+      "name": "Mega Man 2",
+      "console": {
+        "id": "46272218-4b1e-4a4d-86db-20a000ea194b",
+        "name": "Nintendo Entertainment System (NES)"
+      },
+      "releaseDate": "14-12-1990",
+      "image": "mega_man_2_nes.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "46272218-4b1e-4a4d-86db-20a000ea195f",
+      "name": "F Zero X",
+      "console": {
+        "id": "34fc2119-43fb-45e2-acd7-7147fc4e5689",
+        "name": "Nintendo 64"
+      },
+      "releaseDate": "06-11-1998",
+      "image": "f_zero_x.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
+  "consoles": [
+    {
+      "id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+      "name": "Nintendo Gamecube (NGC)",
+      "releaseDate": "03-01-2002",
+      "image": "gamecube.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "icon": "gamecube_icon.jpg"
+    },
+    {
+      "id": "beb583f7-0739-4daa-9eee-5477296f6d5a",
+      "name": "PlayStation 2",
+      "releaseDate": "24-11-2000",
+      "image": "ps2.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "icon": "ps2_icon.jpg"
+    },
+    {
+      "id": "34fc2119-43fb-45e2-acd7-7147fc4e5689",
+      "name": "Nintendo 64",
+      "releaseDate": "01-09-1997",
+      "image": "n64.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "icon": "n64_icon.jpg"
+    },
+    {
+      "id": "46272218-4b1e-4a4d-86db-20a000ea194b",
+      "name": "Nintendo Entertainment System (NES)",
+      "releaseDate": "01-09-1986",
+      "image": "nes.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "icon": "nes_icon.jpg"
+    }
+  ]
 }

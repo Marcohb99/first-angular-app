@@ -1,10 +1,8 @@
-import {Console} from "./console";
-
-export interface VideoGame {
+export interface Console {
     id: string,
     name: string,
-    console: Console,
     releaseDate: string,
     image: string,
     description: string,
+    icon: string
 }

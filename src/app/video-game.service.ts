@@ -5,8 +5,6 @@ import { VideoGame } from './videogame';
   providedIn: 'root'
 })
 export class VideoGameService {
-  videoGameList : VideoGame[] = [];
-
   url = 'http://localhost:3000/videogames';
 
   async getVideoGameById(id: string): Promise<VideoGame | undefined> {
@@ -14,17 +12,11 @@ export class VideoGameService {
     return (await data.json()) ?? {};
   }
 
-  submitApplication(firstName: string, lastName: string, email: string) {
-    console.log(
-      `Application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
-    );
-  }
-
   async getVideoGamesByConsole(text: string): Promise<VideoGame[]> {
     if (!text) {
       return [];
     }
-    const data = await fetch(`${this.url}?console=${text}`);
+    const data = await fetch(`${this.url}?console.name=${text}`);
     return (await data.json()) ?? {};
   }
 
