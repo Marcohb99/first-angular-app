@@ -4,6 +4,7 @@ import {VideoGameComponent} from '../video-game/video-game.component';
 import {VideoGame} from '../videogame';
 import { VideoGameService } from '../video-game.service';
 import {RouterLink} from "@angular/router";
+import {FormGroup, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
@@ -11,15 +12,16 @@ import {RouterLink} from "@angular/router";
   imports: [
     CommonModule,
     VideoGameComponent,
-    RouterLink
+    RouterLink,
+    ReactiveFormsModule
   ],
   template: `
     <section>
-      <form>
+      <form [formGroup]="searchForm" (submit)="filterResults(filter.value)">
         <input type="text" placeholder="Filter by console" #filter>
         <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-        <button class="primary" routerLink="/create-account">Create Account</button>
       </form>
+      <button class="primary" routerLink="/create-account">Create Account</button>
     </section>
     <section class="results">
       <app-video-game
@@ -31,9 +33,10 @@ import {RouterLink} from "@angular/router";
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  videoGameList : VideoGame[] = [];
-  videoGameService: VideoGameService = inject(VideoGameService);
-  filteredVideoGames: VideoGame[] = [];
+  protected videoGameList : VideoGame[] = [];
+  protected videoGameService: VideoGameService = inject(VideoGameService);
+  protected filteredVideoGames: VideoGame[] = [];
+  protected searchForm = new FormGroup({});
 
   constructor() {
     this.videoGameService.getAllVideoGames()
