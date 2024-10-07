@@ -1,0 +1,19 @@
+.inner-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
+
+.inner-content .img {
+    width: 100%;
+    height: 100%;
+}
+
+.listing-heading {
+    font-size: 40pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}

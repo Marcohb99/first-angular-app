@@ -2,39 +2,50 @@ import {Component, inject, Input} from '@angular/core';
 import {Console} from "../console";
 import {ActivatedRoute} from "@angular/router";
 import {ConsoleService} from "../console.service";
+import {NzContentComponent} from "ng-zorro-antd/layout";
+import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
 
 @Component({
   selector: 'app-console-detail',
   standalone: true,
-  imports: [],
+  imports: [
+    NzContentComponent,
+    NzRowDirective,
+    NzColDirective
+  ],
   template: `
-    <article>
-      <section class="listing-description">
+    <nz-content>
+      <div nz-row>
         <h2 class="listing-heading">
-          {{ consoleEntity?.name }} 
+          {{ consoleEntity?.name }}
           <img
-            width="3%"
-            height="3%"
-            src="/assets/{{consoleEntity?.icon}}"
-            alt="Icon of {{ consoleEntity?.name }}"
-            crossorigin
-        />
+              width="10%"
+              src="/assets/{{consoleEntity?.icon}}"
+              alt="Icon of {{ consoleEntity?.name }}"
+              crossorigin
+          />
         </h2>
-        <img
-            class="listing-photo"
-            src="/assets/{{consoleEntity?.image}}"
-            alt="Image of {{ consoleEntity?.name }}"
-            crossorigin
-        />
-      </section>
-      <section class="listing-features">
-        <h2 class="section-heading">About this console</h2>
-        <p>Release date: {{ consoleEntity?.releaseDate }}</p>
-        <p class="detail-description">
-          {{ consoleEntity?.description }}
-        </p>
-      </section>
-    </article>
+      </div>
+      <nz-content>
+        <div nz-row>
+          <div nz-col class="inner-content" nzSpan="12">
+            <h2 class="section-heading">About this console</h2>
+            <p>Release date: {{ consoleEntity?.releaseDate }}</p>
+            <p class="detail-description">
+              {{ consoleEntity?.description }}
+            </p>
+          </div>
+          <div nz-col class="inner-content" nzSpan="12">
+            <img
+                class="listing-photo"
+                src="/assets/{{consoleEntity?.image}}"
+                alt="Image of {{ consoleEntity?.name }}"
+                crossorigin
+            />
+          </div>
+        </div>
+      </nz-content>
+    </nz-content>
   `,
   styleUrl: './console-detail.component.css'
 })

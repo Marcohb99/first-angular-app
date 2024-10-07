@@ -14,6 +14,7 @@ import {NzMenuDirective} from "ng-zorro-antd/menu";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NzInputDirective} from "ng-zorro-antd/input";
 import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
+import {NzContentComponent} from "ng-zorro-antd/layout";
 
 @Component({
   selector: 'app-home',
@@ -31,35 +32,38 @@ import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
     NzDropDownDirective,
     NzInputDirective,
     NzRowDirective,
-    NzColDirective
+    NzColDirective,
+    NzContentComponent
   ],
   template: `
-    <div nz-row>
-      <div class="search-form" nz-col nzSpan="12">
-        <form [formGroup]="searchForm" (submit)="filterResults(filter.value)">
-          <input nz-input placeholder="Filter by name" nzSize="default" #filter/>
-          <button nz-button nzType="primary" (click)="filterResults(filter.value)">
-            <span nz-icon nzType="search"></span>
-            Search
-          </button>
-        </form>
+    <nz-content>
+      <div nz-row>
+        <div class="search-form" nz-col nzSpan="12">
+          <form [formGroup]="searchForm" (submit)="filterResults(filter.value)">
+            <input nz-input placeholder="Filter by name" nzSize="default" #filter/>
+            <button nz-button nzType="primary" (click)="filterResults(filter.value)">
+              <span nz-icon nzType="search"></span>
+              Search
+            </button>
+          </form>
+        </div>
+        <div nz-col style="margin-top: 1.25rem" nzSpan="8">
+          <select style="margin-left: 1rem; margin-right: 1rem" #consoleFilter (change)="onSelected(consoleFilter.value)">
+            <option>All</option>
+            <option *ngFor="let console of consoleList">{{console.name}}</option>
+          </select>
+        </div>
+        <div nz-col style="margin-top: 1rem" nzSpan="2">
+          <button nz-button nzType="primary" routerLink="/create-account">Create Account</button>
+        </div>
       </div>
-      <div nz-col style="margin-top: 1.25rem" nzSpan="8">
-        <select style="margin-left: 1rem; margin-right: 1rem" #consoleFilter (change)="onSelected(consoleFilter.value)">
-          <option>All</option>
-          <option *ngFor="let console of consoleList">{{console.name}}</option>
-        </select>
-      </div>
-      <div nz-col style="margin-top: 1rem" nzSpan="2">
-        <button nz-button nzType="primary" routerLink="/create-account">Create Account</button>
-      </div>
-    </div>
-    <section class="results">
-      <app-video-game
-          *ngFor="let videoGame of filteredVideoGames"
-          [videoGame]="videoGame">
-      </app-video-game>
-    </section>
+      <section class="results">
+        <app-video-game
+            *ngFor="let videoGame of filteredVideoGames"
+            [videoGame]="videoGame">
+        </app-video-game>
+      </section>
+    </nz-content>
   `,
   styleUrls: ['./home.component.css'],
 })

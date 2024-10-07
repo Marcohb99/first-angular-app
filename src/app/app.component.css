@@ -1,3 +1,16 @@
 .brand-logo {
     margin: 1rem 0.5rem 1rem 1rem ;
 }
+/*.logo {*/
+/*    width: 120px;*/
+/*    height: 31px;*/
+/*    margin: 16px 24px 16px 0;*/
+/*    float: left;*/
+/*}*/
+
+.logo .img {
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    float: left;
+    width: 6%;
+}
