@@ -6,24 +6,28 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
 import {NzContentComponent} from "ng-zorro-antd/layout";
+import {ItemUnitsComponent} from "../item-units/item-units.component";
+import {ItemCreditsComponent} from "../item-credits/item-credits.component";
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule, ReactiveFormsModule, NgOptimizedImage, NzRowDirective, NzColDirective, NzContentComponent, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, NgOptimizedImage, NzRowDirective, NzColDirective, NzContentComponent, RouterLink, ItemUnitsComponent, ItemCreditsComponent],
   standalone: true,
   template: `
     <nz-content>
       <div nz-row>
-        <h2 class="listing-heading">{{ videoGame?.name }} <a [routerLink]="['/console-details', videoGame?.console?.id]">({{ videoGame?.console?.name }})</a></h2>
+        <h2 class="listing-heading">{{ videoGame?.name }} </h2>
       </div>
       <nz-content>
         <div nz-row>
           <div nz-col class="inner-content" nzSpan="12">
             <h2 class="section-heading">About this video game</h2>
             <p>Release date: {{ videoGame?.releaseDate }}</p>
+            <p>Platform: <a [routerLink]="['/console-details', videoGame?.console?.id]">({{ videoGame?.console?.name }})</a></p>
             <p class="detail-description">
               {{ videoGame?.description }}
             </p>
+            <app-item-credits></app-item-credits>
           </div>
           <div class="inner-content" nz-col nzSpan="12">
             <img
@@ -31,6 +35,11 @@ import {NzContentComponent} from "ng-zorro-antd/layout";
                 alt="Image of {{ videoGame?.name }}"
                 crossorigin
             />
+          </div>
+        </div>
+        <div nz-row>
+          <div class="inner-content" nz-col nzSpan="24">
+            <app-item-units></app-item-units>
           </div>
         </div>
       </nz-content>

@@ -4,6 +4,8 @@ import {ActivatedRoute} from "@angular/router";
 import {ConsoleService} from "../console.service";
 import {NzContentComponent} from "ng-zorro-antd/layout";
 import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
+import {ItemCreditsComponent} from "../item-credits/item-credits.component";
+import {ItemUnitsComponent} from "../item-units/item-units.component";
 
 @Component({
   selector: 'app-console-detail',
@@ -11,7 +13,9 @@ import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
   imports: [
     NzContentComponent,
     NzRowDirective,
-    NzColDirective
+    NzColDirective,
+    ItemCreditsComponent,
+    ItemUnitsComponent
   ],
   template: `
     <nz-content>
@@ -34,6 +38,7 @@ import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
             <p class="detail-description">
               {{ consoleEntity?.description }}
             </p>
+            <app-item-credits></app-item-credits>
           </div>
           <div nz-col class="inner-content" nzSpan="12">
             <img
@@ -42,6 +47,11 @@ import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
                 alt="Image of {{ consoleEntity?.name }}"
                 crossorigin
             />
+          </div>
+        </div>
+        <div nz-row>
+          <div class="inner-content" nz-col nzSpan="24">
+            <app-item-units></app-item-units>
           </div>
         </div>
       </nz-content>
