@@ -2,8 +2,6 @@ import {Component, inject, Input} from '@angular/core';
 import { VideoGame } from '../videogame';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {Console as ConsoleEntity}  from "../console";
-import {ConsoleService} from "../console.service";
 import {NzCardComponent} from "ng-zorro-antd/card";
 
 @Component({

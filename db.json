@@ -89,5 +89,106 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "icon": "nes_icon.jpg"
     }
+  ],
+  "videogame-units": [
+    {
+      "id": "6a1120a3-8a08-4270-b053-df54b66331b5",
+      "videogame_id": "9f26ec4b-b2f3-4dc1-aa78-291dc3877194",
+      "userId": "2e8ac4c8-a61a-420d-a75e-f169ba6e5bb8",
+      "hasBox": true,
+      "status": "mint",
+      "price": 50.46,
+      "originCountry": "ES"
+    },
+    {
+      "id": "1cfc6b75-6f78-4e99-8b5b-5b2287fc9c22",
+      "videogame_id": "9f26ec4b-b2f3-4dc1-aa78-291dc3877194",
+      "userId": "45a1c4f1-1f21-4832-a6dc-080dc16a2c3e",
+      "hasBox": true,
+      "status": "mint",
+      "price": 62.30,
+      "originCountry": "US"
+    },
+    {
+      "id": "7d32c71e-1d98-4a0a-9349-e9c5c4b9c124",
+      "videogame_id": "9f26ec4b-b2f3-4dc1-aa78-291dc3877194",
+      "userId": "b49d1d0b-1e91-4c64-9421-9259e2b7ec92",
+      "hasBox": false,
+      "status": "good",
+      "price": 30.00,
+      "originCountry": "JP"
+    },
+    {
+      "id": "f7c1c94f-d0df-4b3c-b847-6f6d119dd4d6",
+      "videogame_id": "46272218-4b1e-4a4d-86db-20a000ea194a",
+      "userId": "682e8a0b-51fe-4d17-8c2f-2bc4f2e403d4",
+      "hasBox": true,
+      "status": "poor",
+      "price": 12.75,
+      "originCountry": "CA"
+    },
+    {
+      "id": "35e80721-38b9-4cf5-bc52-619ed3f9c5c1",
+      "videogame_id": "46272218-4b1e-4a4d-86db-20a000ea194a",
+      "userId": "f3c9eaf5-0b5d-4c0d-b918-bf4e3d1fb4f1",
+      "hasBox": false,
+      "status": "mint",
+      "price": 47.89,
+      "originCountry": "GB"
+    },
+    {
+      "id": "83f88c06-9441-4667-9d9c-c67a3a349c3e",
+      "videogame_id": "46272218-4b1e-4a4d-86db-20a000ea194a",
+      "userId": "25fd55c5-c650-4a30-918b-82b4e5f8b222",
+      "hasBox": true,
+      "status": "good",
+      "price": 35.60,
+      "originCountry": "AU"
+    },
+    {
+      "id": "2b8e5f93-9277-4b1c-856d-016fb29a91a1",
+      "videogame_id": "44ede8ba-95ee-438d-967e-d35e787fb49a",
+      "userId": "df1ab1e9-2b14-4b72-a8d3-c87b156cb6c7",
+      "hasBox": true,
+      "status": "poor",
+      "price": 15.50,
+      "originCountry": "DE"
+    },
+    {
+      "id": "62434259-7589-4c4c-b799-087ac6322cf6",
+      "videogame_id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+      "userId": "c18f5d73-7489-4ed8-8dc4-274c8e6886f7",
+      "hasBox": false,
+      "status": "fair",
+      "price": 20.00,
+      "originCountry": "FR"
+    },
+    {
+      "id": "9e4c7bc7-04b2-4f21-b6f2-63b91a6b5229",
+      "videogame_id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+      "userId": "97b5f49e-34ff-4aaf-8594-0db8b7f20710",
+      "hasBox": true,
+      "status": "fair",
+      "price": 25.80,
+      "originCountry": "ES"
+    },
+    {
+      "id": "af0c376d-9a4c-4701-a4d7-6b995c5ec94f",
+      "videogame_id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+      "userId": "bc4d9c21-0e2c-4191-b5a2-03289a89c62f",
+      "hasBox": true,
+      "status": "mint",
+      "price": 65.20,
+      "originCountry": "IT"
+    },
+    {
+      "id": "fea5c70c-4a1c-4f22-9e0b-ea56d026a0f3",
+      "videogame_id": "44ede8ba-94ee-438d-967e-d35e787fb49a",
+      "userId": "08d1db99-ec0b-404b-a99d-4e1581d20cd7",
+      "hasBox": false,
+      "status": "poor",
+      "price": 10.00,
+      "originCountry": "MX"
+    }
   ]
 }

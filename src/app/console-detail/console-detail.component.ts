@@ -51,7 +51,7 @@ import {ItemUnitsComponent} from "../item-units/item-units.component";
         </div>
         <div nz-row>
           <div class="inner-content" nz-col nzSpan="24">
-            <app-item-units></app-item-units>
+<!--            <app-item-units></app-item-units>-->
           </div>
         </div>
       </nz-content>
