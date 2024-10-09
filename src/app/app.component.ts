@@ -2,12 +2,18 @@ import {Component} from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {RouterModule} from '@angular/router';
 import {NzContentComponent, NzFooterComponent, NzHeaderComponent, NzLayoutComponent} from "ng-zorro-antd/layout";
-import {MenuSidebarComponent} from "./menu-sidebar/menu-sidebar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule, NzLayoutComponent, NzHeaderComponent, NzContentComponent, NzFooterComponent, MenuSidebarComponent],
+  imports: [
+    HomeComponent,
+    RouterModule,
+    NzLayoutComponent,
+    NzHeaderComponent,
+    NzContentComponent,
+    NzFooterComponent
+  ],
   template: `
     <main>
       <nz-layout>

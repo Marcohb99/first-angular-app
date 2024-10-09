@@ -14,6 +14,8 @@ import {NzMenuDirective, NzMenuItemComponent, NzSubMenuComponent} from "ng-zorro
 import {NzInputDirective} from "ng-zorro-antd/input";
 import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
 import {NzContentComponent, NzHeaderComponent, NzLayoutComponent, NzSiderComponent} from "ng-zorro-antd/layout";
+import {Company} from "../company";
+import {CompanyService} from "../company.service";
 
 @Component({
   selector: 'app-home',
@@ -58,21 +60,26 @@ import {NzContentComponent, NzHeaderComponent, NzLayoutComponent, NzSiderCompone
               </button>
             </form>
           </li>
-          <li nz-submenu nzTitle="Console" nzIcon="user">
+          <li nz-submenu (click)="loadConsoles()" nzTitle="By Console" nzIcon="user">
             <ul>
-              <li nz-menu-item (click)="onSelected('All')">All</li>
-              <li nz-menu-item 
+              <li nz-menu-item (click)="onSelectedConsole('All')">All</li>
+              <li nz-menu-item
                   *ngFor="let consoleElem of consoleList"
-                  (click)="onSelected(consoleElem.name)"
+                  (click)="onSelectedConsole(consoleElem.name)"
               >
-                {{consoleElem.name}}
+                {{ consoleElem.name }}
               </li>
             </ul>
           </li>
-          <li nz-submenu nzTitle="Team" nzIcon="team">
+          <li nz-submenu (click)="loadCompanies()" nzTitle="By Company" nzIcon="user">
             <ul>
-              <li nz-menu-item>Team 1</li>
-              <li nz-menu-item>Team 2</li>
+              <li nz-menu-item (click)="onSelectedCompany('All')">All</li>
+              <li nz-menu-item
+                  *ngFor="let company of companyList"
+                  (click)="onSelectedCompany(company.name)"
+              >
+                {{ company.name }}
+              </li>
             </ul>
           </li>
           <li nz-menu-item>
@@ -90,6 +97,7 @@ import {NzContentComponent, NzHeaderComponent, NzLayoutComponent, NzSiderCompone
               *ngFor="let videoGame of filteredVideoGames"
               [videoGame]="videoGame">
           </app-video-game>
+          <h3 *ngIf="filteredVideoGames.length === 0"> No items match the chosen criteria. </h3>
         </section>
       </nz-content>
     </nz-layout>
@@ -99,8 +107,10 @@ import {NzContentComponent, NzHeaderComponent, NzLayoutComponent, NzSiderCompone
 export class HomeComponent {
   protected videoGameList : VideoGame[] = [];
   protected consoleList : ConsoleEntity[] = [];
+  protected companyList : Company[] = [];
   protected videoGameService: VideoGameService = inject(VideoGameService);
   protected consoleService: ConsoleService = inject(ConsoleService);
+  protected companyService: CompanyService = inject(CompanyService);
   protected filteredVideoGames: VideoGame[] = [];
   protected searchForm = new FormGroup({});
 
@@ -110,10 +120,6 @@ export class HomeComponent {
       this.videoGameList = videoGameList;
       this.filteredVideoGames = videoGameList;
     });
-    this.consoleService.getAllConsoles()
-        .then((consoleList: ConsoleEntity[]) => {
-          this.consoleList = consoleList;
-        });
   }
 
   filterResults(text: string) {
@@ -127,13 +133,9 @@ export class HomeComponent {
       this.filteredVideoGames = filteredVideoGameList;
     });
   }
-  onSelected(consoleName: string): void {
-    console.log(consoleName === "All")
+  onSelectedConsole(consoleName: string): void {
     if (consoleName === "All") {
-      this.videoGameService.getAllVideoGames()
-          .then((videoGameList: VideoGame[]) => {
-            this.filteredVideoGames = videoGameList;
-          });
+      this.filteredVideoGames = this.videoGameList;
       return;
     }
 
@@ -141,5 +143,35 @@ export class HomeComponent {
         .then((filteredVideoGameList: VideoGame[]) => {
           this.filteredVideoGames = filteredVideoGameList;
         });
+  }
+
+  onSelectedCompany(companyName: string) {
+    if (companyName === "All") {
+      this.filteredVideoGames = this.videoGameList;
+      return;
+    }
+    this.companyService.getByName(companyName).then((company: Company[]) => {
+      this.videoGameService.getVideoGamesByCompany(company[0].id)
+          .then((filteredVideoGameList: VideoGame[]) => {
+            this.filteredVideoGames = filteredVideoGameList;
+          });
+    })
+  }
+
+  loadConsoles() {
+    if (this.consoleList.length === 0) {
+      this.consoleService.getAllConsoles()
+          .then((consoleList: ConsoleEntity[]) => {
+            this.consoleList = consoleList;
+          });
+    }
+  }
+  loadCompanies(): void {
+    if (this.companyList.length === 0) {
+      this.companyService.getAllCompanies()
+          .then((companyList: Company[]) => {
+            this.companyList = companyList;
+          });
+    }
   }
 }

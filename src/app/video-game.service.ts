@@ -29,4 +29,12 @@ export class VideoGameService {
     const data = await fetch(`${this.url}?name=${text}`);
     return (await data.json()) ?? [];
   }
+
+  async getVideoGamesByCompany(companyName: string) {
+    if (!companyName) {
+      return [];
+    }
+    const data = await fetch(`${this.url}?company=${companyName}`);
+    return (await data.json()) ?? {};
+  }
 }

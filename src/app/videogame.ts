@@ -1,4 +1,5 @@
 import {Console} from "./console";
+import {Company} from "./company";
 
 export interface VideoGame {
     id: string,
@@ -7,4 +8,5 @@ export interface VideoGame {
     releaseDate: string,
     image: string,
     description: string,
+    company: string
 }
