@@ -2,11 +2,12 @@ import {Component} from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {RouterModule} from '@angular/router';
 import {NzContentComponent, NzFooterComponent, NzHeaderComponent, NzLayoutComponent} from "ng-zorro-antd/layout";
+import {MenuSidebarComponent} from "./menu-sidebar/menu-sidebar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule, NzLayoutComponent, NzHeaderComponent, NzContentComponent, NzFooterComponent],
+  imports: [HomeComponent, RouterModule, NzLayoutComponent, NzHeaderComponent, NzContentComponent, NzFooterComponent, MenuSidebarComponent],
   template: `
     <main>
       <nz-layout>
@@ -19,11 +20,7 @@ import {NzContentComponent, NzFooterComponent, NzHeaderComponent, NzLayoutCompon
             </header>
           </a>
         </nz-header>
-        <nz-content>
-          <section class="content">
-            <router-outlet></router-outlet>
-          </section>
-        </nz-content>
+        <router-outlet></router-outlet>
         <nz-footer>Marco Hurtado ©2024</nz-footer>
       </nz-layout>
     </main>
@@ -31,5 +28,4 @@ import {NzContentComponent, NzFooterComponent, NzHeaderComponent, NzLayoutCompon
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Video Game Cataloguer';
 }
