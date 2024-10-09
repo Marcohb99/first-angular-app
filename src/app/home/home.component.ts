@@ -12,7 +12,6 @@ import {NzIconDirective} from "ng-zorro-antd/icon";
 import {NzDropDownADirective, NzDropDownDirective, NzDropdownMenuComponent} from "ng-zorro-antd/dropdown";
 import {NzMenuDirective, NzMenuItemComponent, NzSubMenuComponent} from "ng-zorro-antd/menu";
 import {NzInputDirective} from "ng-zorro-antd/input";
-import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
 import {NzContentComponent, NzHeaderComponent, NzLayoutComponent, NzSiderComponent} from "ng-zorro-antd/layout";
 import {Company} from "../company";
 import {CompanyService} from "../company.service";
@@ -32,8 +31,6 @@ import {CompanyService} from "../company.service";
     NzMenuDirective,
     NzDropDownDirective,
     NzInputDirective,
-    NzRowDirective,
-    NzColDirective,
     NzContentComponent,
     NzHeaderComponent,
     NzLayoutComponent,
@@ -81,13 +78,6 @@ import {CompanyService} from "../company.service";
                 {{ company.name }}
               </li>
             </ul>
-          </li>
-          <li nz-menu-item>
-            <span nz-icon nzType="file"></span>
-            <span>File</span>
-          </li>
-          <li nz-menu-item>
-            <button nz-button nzType="primary" routerLink="/create-account">Create Account</button>
           </li>
         </ul>
       </nz-sider>
