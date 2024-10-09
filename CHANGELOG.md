@@ -1,3 +1,9 @@
+## 0.3.0 (2024-10-09)
+
+### Feat
+
+- **header**: extract header to component and add header links
+
 ## 0.2.0 (2024-10-09)
 
 ### Feat
