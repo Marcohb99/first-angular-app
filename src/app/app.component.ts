@@ -23,10 +23,10 @@ import {MenuHeaderComponent} from "./menu-header/menu-header.component";
   ],
     template: `
         <main>
-            <nz-layout>
-                <nz-header>
-                    <app-menu-header></app-menu-header>
-                </nz-header>
+          <nz-header>
+            <app-menu-header></app-menu-header>
+          </nz-header>
+          <nz-layout>
                 <router-outlet></router-outlet>
                 <nz-footer>Marco Hurtado ©2024</nz-footer>
             </nz-layout>

@@ -29,7 +29,7 @@ import {NzSpinComponent} from "ng-zorro-antd/spin";
           <div nz-col class="inner-content" nzSpan="12">
             <h2 class="section-heading">About this video game</h2>
             <p>Release date: {{ videoGame.releaseDate }}</p>
-            <p>Platform: <a [routerLink]="['/console-details', videoGame.console.id]">({{ videoGame?.console?.name }}
+            <p>Platform: <a [routerLink]="['/console-details', videoGame.console.id]">({{ videoGame.console.name }}
               )</a></p>
             <p class="detail-description">
               {{ videoGame.description }}
