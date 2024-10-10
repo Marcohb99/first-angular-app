@@ -12,6 +12,8 @@ import {Console as ConsoleEntity} from "../console";
 import {ConsoleService} from "../console.service";
 import {CompanyService} from "../company.service";
 import {VideoGameService} from "../video-game.service";
+import { NzIconModule } from 'ng-zorro-antd/icon';
+
 
 @Component({
   selector: 'app-menu-side-bar',
@@ -25,10 +27,11 @@ import {VideoGameService} from "../video-game.service";
     NzButtonComponent,
     NzInputDirective,
     NzSubMenuComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzIconModule,
   ],
   template: `
-    <nz-sider nzCollapsible nzWidth="200px">
+    <nz-sider nzCollapsible nzWidth="278px">
       <div class="logo"></div>
       <ul nz-menu nzTheme="dark" nzMode="inline">
         <li nz-menu-item>
@@ -36,7 +39,7 @@ import {VideoGameService} from "../video-game.service";
           <span>Item Type</span>
           <!-- TODO -->
         </li>
-        <li nz-submenu nzTitle="Search" nzIcon="user">
+        <li nz-submenu nzTitle="Search" nzIcon="search">
           <form [formGroup]="searchForm" (submit)="filterResults(filter.value)">
             <input nz-input placeholder="Filter by name" nzSize="default" #filter/>
             <button nz-button nzType="primary" (click)="filterResults(filter.value)">
@@ -45,7 +48,7 @@ import {VideoGameService} from "../video-game.service";
             </button>
           </form>
         </li>
-        <li nz-submenu (click)="loadConsoles()" nzTitle="By Console" nzIcon="user">
+        <li nz-submenu (click)="loadConsoles()" nzTitle="By Console" nzIcon="search">
           <ul>
             <li nz-menu-item (click)="onSelectedConsole('All')">All</li>
             <li nz-menu-item
@@ -56,7 +59,7 @@ import {VideoGameService} from "../video-game.service";
             </li>
           </ul>
         </li>
-        <li nz-submenu (click)="loadCompanies()" nzTitle="By Company" nzIcon="user">
+        <li nz-submenu (click)="loadCompanies()" nzTitle="By Company" nzIcon="search">
           <ul>
             <li nz-menu-item (click)="onSelectedCompany('All')">All</li>
             <li nz-menu-item
