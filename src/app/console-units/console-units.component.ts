@@ -1,21 +1,21 @@
 import {Component, inject, Input, OnInit} from '@angular/core';
+import {NzContentComponent} from "ng-zorro-antd/layout";
 import {NzDividerComponent} from "ng-zorro-antd/divider";
 import {NzTableComponent} from "ng-zorro-antd/table";
-import {VideogameUnitsService} from "../videogame-units.service";
-import {VideoGameUnit} from "../video-game-unit";
-import {NgIf} from "@angular/common";
-import {NzContentComponent} from "ng-zorro-antd/layout";
 import {NzRowDirective} from "ng-zorro-antd/grid";
+import {ConsoleUnitsService} from "../console-units.service";
+import {ConsoleUnit} from "../console-unit";
+import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-item-units',
+  selector: 'app-console-units',
   standalone: true,
   imports: [
+    NzContentComponent,
     NzDividerComponent,
     NzTableComponent,
-    NgIf,
-    NzContentComponent,
-    NzRowDirective
+    NzRowDirective,
+    NgIf
   ],
   template: `
     <h3> Available units </h3>
@@ -50,22 +50,22 @@ import {NzRowDirective} from "ng-zorro-antd/grid";
     <nz-content *ngIf="listOfData.length === 0 ">
       <div nz-row>
         <h2 class="listing-heading"> 
-          This game has no available units yet
+          This console has no available units yet
           but you can <a onclick="alert('alert created!')">create an alert for it</a>
         </h2>
       </div>
     </nz-content>
   `,
-  styleUrl: './item-units.component.css'
+  styleUrl: './console-units.component.css'
 })
-export class ItemUnitsComponent implements OnInit{
-  protected videoGameUnitService: VideogameUnitsService = inject(VideogameUnitsService);
-  protected listOfData: VideoGameUnit[] = [];
-  @Input() videoGameId!: string;
+export class ConsoleUnitsComponent implements OnInit{
+  protected consoleUnitsService: ConsoleUnitsService = inject(ConsoleUnitsService);
+  protected listOfData: ConsoleUnit[] = [];
+  @Input() consoleId!: string;
 
   ngOnInit() {
-    this.videoGameUnitService.getUnitsByVideoGameId(this.videoGameId)
-        .then((unitList: VideoGameUnit[]) => {
+    this.consoleUnitsService.getUnitsByConsoleId(this.consoleId)
+        .then((unitList: ConsoleUnit[]) => {
           this.listOfData = unitList;
         })
   }

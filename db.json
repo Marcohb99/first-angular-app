@@ -221,5 +221,88 @@
       "country": "US",
       "creation_year": 1993
     }
+  ],
+  "console-units": [
+    {
+      "id": "4c6869f7-2965-4699-b70a-5031a84ea2fe",
+      "console_id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+      "userId": "2e8ac4c8-a61a-420d-a75e-f169ba6e5bb8",
+      "hasBox": true,
+      "status": "mint",
+      "price": 50.46,
+      "originCountry": "ES"
+    },
+    {
+      "id": "5f1f3a85-82ca-4b19-8922-6ba890ffcd70",
+      "console_id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+      "userId": "45a1c4f1-1f21-4832-a6dc-080dc16a2c3e",
+      "hasBox": true,
+      "status": "mint",
+      "price": 62.30,
+      "originCountry": "US"
+    },
+    {
+      "id": "151ed5f6-437e-4ecf-afc4-5facd862894e",
+      "console_id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+      "userId": "b49d1d0b-1e91-4c64-9421-9259e2b7ec92",
+      "hasBox": false,
+      "status": "good",
+      "price": 30.00,
+      "originCountry": "JP"
+    },
+    {
+      "id": "562671b0-325b-4318-9434-13f285140c93",
+      "console_id": "46272218-4b1e-4a4d-86db-20a000ea194f",
+      "userId": "682e8a0b-51fe-4d17-8c2f-2bc4f2e403d4",
+      "hasBox": true,
+      "status": "poor",
+      "price": 12.75,
+      "originCountry": "CA"
+    },
+    {
+      "id": "e0578435-4ff0-48cc-9da5-218d7ec9a028",
+      "console_id": "beb583f7-0739-4daa-9eee-5477296f6d5a",
+      "userId": "f3c9eaf5-0b5d-4c0d-b918-bf4e3d1fb4f1",
+      "hasBox": false,
+      "status": "mint",
+      "price": 47.89,
+      "originCountry": "GB"
+    },
+    {
+      "id": "39ba561e-0254-4d8a-81d7-1a63fe090263",
+      "console_id": "beb583f7-0739-4daa-9eee-5477296f6d5a",
+      "userId": "25fd55c5-c650-4a30-918b-82b4e5f8b222",
+      "hasBox": true,
+      "status": "good",
+      "price": 35.60,
+      "originCountry": "AU"
+    },
+    {
+      "id": "b0e7f539-4c74-4ffc-8cd3-de0d220a2aa4",
+      "console_id": "beb583f7-0739-4daa-9eee-5477296f6d5a",
+      "userId": "df1ab1e9-2b14-4b72-a8d3-c87b156cb6c7",
+      "hasBox": true,
+      "status": "poor",
+      "price": 15.50,
+      "originCountry": "DE"
+    },
+    {
+      "id": "f4997642-01ac-4cb3-898b-bfb64f3f13a6",
+      "console_id": "34fc2119-43fb-45e2-acd7-7147fc4e5689",
+      "userId": "c18f5d73-7489-4ed8-8dc4-274c8e6886f7",
+      "hasBox": false,
+      "status": "fair",
+      "price": 20.00,
+      "originCountry": "FR"
+    },
+    {
+      "id": "6695bd9e-f854-48d7-b3fc-a0987e9afb26",
+      "console_id": "34fc2119-43fb-45e2-acd7-7147fc4e5689",
+      "userId": "97b5f49e-34ff-4aaf-8594-0db8b7f20710",
+      "hasBox": true,
+      "status": "fair",
+      "price": 25.80,
+      "originCountry": "ES"
+    }
   ]
 }

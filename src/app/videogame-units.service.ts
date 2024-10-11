@@ -8,7 +8,7 @@ export class VideogameUnitsService {
 
   url = 'http://localhost:3000/videogame-units';
 
-  async getUnitsByVideoGameById(id: string | undefined): Promise<VideoGameUnit[]> {
+  async getUnitsByVideoGameId(id: string | undefined): Promise<VideoGameUnit[]> {
     const data = await fetch(`${this.url}?videogame_id=${id}`);
     return (await data.json()) ?? {};
   }
