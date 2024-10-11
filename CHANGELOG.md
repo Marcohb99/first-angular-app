@@ -1,3 +1,17 @@
+## 0.4.0 (2024-10-11)
+
+### Feat
+
+- **console-units**: add component to show console units similar to video game units
+
+### Fix
+
+- **icons**: use icons that exist
+
+### Refactor
+
+- **sidebar**: extract sidebar to component
+
 ## 0.3.0 (2024-10-09)
 
 ### Feat
